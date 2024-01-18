@@ -1,3 +1,5 @@
+from Player import Player
+
 class Weapons:
     def __init__(self) -> None:
         self.weapon_list = [
@@ -27,7 +29,7 @@ class Weapons:
         for weapon in self.weapon_list:
             print(f"Name: {weapon['name']}, Strength: {weapon['strength']}")
 
-    def weaponSelect(self):
+    def weaponSelect(self, player):
         for weapon in self.weapon_list:
             print(f"Name: {weapon['name']}")
         
@@ -44,7 +46,13 @@ class Weapons:
                     print(f"\nName: {weapon['name']}")
                     print(f"Strength: {weapon['strength']}")
                     print(f"Cost: {weapon['cost']}\n")
-    
+
+                    # ability to purchase the weapon
+                    # and add to inventory
+                    choice = input(f"Would you like to purchase this {weapon['name']}? (Y/N)")
+                    if choice == 'Y':
+                        player.getItem(weapon['name'])
+
 
                     done = input("Continue looking? (Y/N)\n").upper()
                     if done == 'N':
@@ -54,6 +62,3 @@ class Weapons:
             if not found:
                 print(f"{item} is not in the list\n")
 
-
-user = Weapons()
-user.weaponSelect()
