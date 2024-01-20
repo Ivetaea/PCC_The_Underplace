@@ -7,7 +7,7 @@ class Player:
         self.coins = 0
         pass
     
-    def getItem(self, item) -> None:
+    def aquireItem(self, item) -> None:
         self.inventory.append(item)
 
     def seeInventory(self) -> None:
