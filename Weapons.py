@@ -51,7 +51,7 @@ class Weapons:
                     # and add to inventory
                     choice = input(f"Would you like to purchase this {weapon['name']}? (Y/N)")
                     if choice == 'Y':
-                        player.getItem(weapon['name'])
+                        player.aquireItem(weapon['name'])
 
 
                     done = input("Continue looking? (Y/N)\n").upper()

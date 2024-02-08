@@ -4,6 +4,8 @@ def menuSelect() -> str:
     print("1. shop")
     print("2. stats")
     print("3. see inventory")
+    print("4. Where am I?")
+    print("5. Travel")
     print("9. quit")
 
     choice = input("enter: ")

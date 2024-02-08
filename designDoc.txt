@@ -1,0 +1,5 @@
+[] create class for each monster??
+[] ability to fight monsters
+[] ability to gather resources
+[] create skills class
+[] ability to gain XP in different skills
