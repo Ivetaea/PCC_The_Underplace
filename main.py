@@ -1,6 +1,7 @@
 import Utility
 from Player import Player
 from Weapons import Weapons
+from World import World
 quit = False
 
 #initialize player
@@ -12,6 +13,7 @@ player = Player()
 #but for not we'll just do this
 
 shop = Weapons() 
+world_map = World()
 
 while quit != True:
     choice = Utility.menuSelect()
@@ -21,6 +23,13 @@ while quit != True:
         player.seeStats()
     if choice == '3':
         player.seeInventory()
+    if choice == '4':
+        world_map.where_am_i()
+    if choice == '5':
+        world_map.travel()
+    if choice =='6':
+        world_map.check_monsters()
+        
     if choice == "9":
         quit = True
     

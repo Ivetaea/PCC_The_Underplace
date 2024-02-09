@@ -1,0 +1,22 @@
+
+
+[] create skills class
+[] ability to gain XP in different skills
+
+
+
+[] ability to gather resources
+  resources to implement:
+    []wood
+    []ore
+    []metal
+
+[] ability to fight monsters
+  monsters to implement:
+    [x]goblins
+    []snakes
+
+
+
+**BEGINNER FRIENDLY**:
+  []update UI components
