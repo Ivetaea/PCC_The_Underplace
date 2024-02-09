@@ -8,18 +8,18 @@ class World:
                 },
                 {
                     "region" : "hyperion",
-                    "monsters": "monsters",
-                    "resources" : "resources"
+                    "monsters": ["none"],
+                    "resources" : ["ore"],
                 },
                 {
-                    "region" : "dust II",
-                    "monsters": "monsters",
-                    "resources" : "resources"
+                    "region" : "desert",
+                    "monsters": "none",
+                    "resources" : "none"
                 },
                 {
                     "region" : "portland community college",
-                    "monsters": "monsters",
-                    "resources" : "resources"
+                    "monsters": "none",
+                    "resources" : "none"
                 }
             ]
 
@@ -27,7 +27,7 @@ class World:
         
     def where_am_i(self):
         print("+---------------------------------------------------+")
-        print(f"Current location: {self.world_map[self.curr_pos]["region"]}")
+        print(f"Current location: {self.world_map[self.curr_pos]['region']}")
         print("+---------------------------------------------------+")
 
 
@@ -39,7 +39,11 @@ class World:
         print("Monsters in the current region:")
         
         for monster in monsters_list:
-            print(monster)
+            if monster == "none":
+                print("There's nothing to fight here")
+                break
+            else:
+                print(monster)
         
         print("+---------------------------------------------------+")
         
