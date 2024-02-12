@@ -2,24 +2,24 @@ class World:
     def __init__(self) -> None:
         self.world_map = [
                 {
-                    "region" : "desert",
+                    "region" : ["giant field"],
                     "monsters" : ["goblins, snakes"],
-                    "resources" : ["wood, ore, metal"]
+                    "resources" : ["wood, ore, berries"]
                 },
                 {
-                    "region" : "hyperion",
+                    "region" : ["woods"],
                     "monsters": ["none"],
-                    "resources" : ["ore"],
+                    "resources" : ["wood, berries"],
                 },
                 {
-                    "region" : "desert",
-                    "monsters": "none",
-                    "resources" : "none"
+                    "region" : ["desert"],
+                    "monsters": ["none"],
+                    "resources" : ["none"]
                 },
                 {
-                    "region" : "portland community college",
-                    "monsters": "none",
-                    "resources" : "none"
+                    "region" : ["ruins"],
+                    "monsters": ["ghosts"],
+                    "resources" : ["ore, berries"]
                 }
             ]
 
@@ -46,15 +46,40 @@ class World:
                 print(monster)
         
         print("+---------------------------------------------------+")
+
+    def check_resources(self):
+        resource_list = self.world_map[self.curr_pos]["resources"]
+        
+        print("+---------------------------------------------------+")
+        print("Resources in the current region:")
+        
+        for resource in resource_list:
+            if resource == "none":
+                print("There's nothing to fight here")
+                break
+            else:
+                print(resource)
+        
+        print("+---------------------------------------------------+")
+
+
         
     def travel(self):
         print("Would you like to travel east or west?")
         choice = input("Enter east/west: ")
+            
 
-        if choice == "east" and self.curr_pos < len(self.world_map):
+        if choice == "east" and self.curr_pos < len(self.world_map) - 1:
             self.curr_pos += 1
+            print("+--------------------------------+")
+            print(self.world_map[self.curr_pos]["region"])
+            print("+--------------------------------+")
+
         elif choice ==  "west" and self.curr_pos > 0:
             self.curr_pos -= 1
+            print("+--------------------------------+")
+            print(self.world_map[self.curr_pos]["region"])
+            print("+--------------------------------+")
         else:
             print("+--------------------------------+")
             print("You are at the edge of the world!")
