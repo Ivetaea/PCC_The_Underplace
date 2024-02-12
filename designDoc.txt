@@ -7,9 +7,9 @@
 
 [] ability to gather resources
   resources to implement:
-    []wood
-    []ore
-    []metal
+    []wood (axe needed)
+    []ore (pickaxe needed)
+    []berries (none needed)
 
 [] ability to fight monsters
   monsters to implement:
@@ -20,3 +20,6 @@
 
 **BEGINNER FRIENDLY**:
   []update UI components
+  []in World.py, create a function for displaying the current position on map
+                 to help clean up code in the "travel(self)" function.
+          

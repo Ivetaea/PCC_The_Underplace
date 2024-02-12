@@ -28,9 +28,13 @@ while quit != True:
     if choice == '5':
         world_map.travel()
     if choice =='6':
-        world_map.check_monsters()
+        world_map.check_monsters()  
+    if choice == '7':
+        print("coming soon!")
+    if choice == '8':
+        world_map.check_resources()
         
-    if choice == "9":
+    if choice == "99":
         quit = True
     
 
